@@ -24,6 +24,12 @@ const Navvar = () => {
       <li>
         <NavLink to={"/register"}>Register</NavLink>
       </li>
+      <li>
+        <NavLink to={"/room"}>Room</NavLink>
+      </li>
+      <li>
+        <NavLink to={"/mybooking"}>My Booking</NavLink>
+      </li>
     </>
   );
   return (
@@ -55,8 +61,11 @@ const Navvar = () => {
         </div>
         <div>
           <div>
-            <p className="text-3xl font-bold">Technology</p>
-            <p className="text-2xl font-medium text-gray-600">Electronics</p>
+            <img
+              src="https://i.pinimg.com/originals/fa/80/08/fa8008a02be1c977476ef629f8f12466.gif"
+              alt=""
+              className="w-48"
+            />
           </div>
         </div>
       </div>

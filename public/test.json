@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/HtZ4Xj1/luxury-bedroom-hotel.jpg"
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/zSYv8kH/modern-studio-apartment-design-with-bedroom-living-space.jpg"
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/kGhVFRV/patrick-robert-doyle-AH8z-KXq-FITA-unsplash.jpg"
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/XSs3MHw/roberto-nickson-emqn-SQw-QQDo-unsplash.jpg"
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/hyv7mSb/sara-dubler-Koei-7y-Yt-Io-unsplash.jpg"
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/VJBtpvv/sasha-kaunas-67-s-Oi7m-VIk-unsplash.jpg"
+  }
+]
+
+
+[
+  {
+    "id": 1,
+    "room_description": "Deluxe Single Room",
+    "price_per_night": 100,
+    "room_size": "25 sqm",
+    "availability": true,
+    "room_img": "https://i.ibb.co/VJBtpvv/sasha-kaunas-67-s-Oi7m-VIk-unsplash.jpg",
+    "specialOffer_available": false,
+    "short_description": "Cozy single room with all amenities."
+  },
+  {
+    "id": 2,
+    "room_description": "Standard Double Room",
+    "price_per_night": 150,
+    "room_size": "30 sqm",
+    "availability": true,
+    "room_img": "https://i.ibb.co/pjpgChG/pexels-jean-van-der-meulen-1457842.jpg",
+    "specialOffer_available": true,
+    "short_description": "Spacious double room with a view."
+  },
+  {
+    "id": 3,
+    "room_description": "Suite with Ocean View",
+    "price_per_night": 250,
+    "room_size": "45 sqm",
+    "availability": true,
+    "room_img": "https://i.ibb.co/XSs3MHw/roberto-nickson-emqn-SQw-QQDo-unsplash.jpg",
+    "specialOffer_available": false,
+    "short_description": "Luxurious suite with a breathtaking ocean view."
+  },
+  {
+    "id": 4,
+    "room_description": "Economy Twin Room",
+    "price_per_night": 80,
+    "room_size": "20 sqm",
+    "availability": true,
+    "room_img": "https://i.ibb.co/zSYv8kH/modern-studio-apartment-design-with-bedroom-living-space.jpg",
+    "specialOffer_available": false,
+    "short_description": "Affordable twin room for budget travelers."
+  },
+  {
+    "id": 5,
+    "room_description": "Family Suite",
+    "price_per_night": 300,
+    "room_size": "60 sqm",
+    "availability": false,
+    "room_img": "https://i.ibb.co/6P1xPLV/pexels-pixabay-262048.jpg",
+    "specialOffer_available": true,
+    "short_description": "Spacious family suite, perfect for a relaxing vacation."
+  },
+  {
+    "id": 6,
+    "room_description": "Luxury Penthouse",
+    "price_per_night": 500,
+    "room_size": "100 sqm",
+    "availability": true,
+    "room_img": "https://i.ibb.co/5GV1RmQ/pexels-pixabay-271618.jpg",
+    "specialOffer_available": true,
+    "short_description": "Top-floor luxury penthouse with stunning city views."
+  }
+]
