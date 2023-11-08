@@ -88,3 +88,32 @@
     "short_description": "Top-floor luxury penthouse with stunning city views."
   }
 ]
+
+
+[
+  {
+    "id": 1,
+    "room_description": "Deluxe Single Room",
+    "price_per_night": 100,
+    "room_img": "https://i.ibb.co/VJBtpvv/sasha-kaunas-67-s-Oi7m-VIk-unsplash.jpg",
+    "short_description": "Cozy single room with all amenities.",
+    "specialty": "Luxury Spa Suite",
+    "description": "Indulge in the lap of luxury with our Spa Suite. This spacious and exquisitely designed room is a haven of relaxation and rejuvenation. Equipped with a private Jacuzzi, a king-size bed, and a spa-like bathroom, it offers the perfect escape for couples seeking"
+  },
+  {
+    "id": 2,
+    "room_description": "Standard Double Room",
+    "price_per_night": 150,
+    "room_img": "https://i.ibb.co/pjpgChG/pexels-jean-van-der-meulen-1457842.jpg",
+    "specialty": "Ocean View Suite",
+    "description": "Experience the ultimate in luxury with our Ocean View Suite. This spacious and beautifully appointed room offers breathtaking views of the ocean, ensuring you wake up to the sound of the waves and a stunning sunrise. The room features a king-size bed, a private balcony, and all the amenities you need for a comfortable stay. Enjoy a romantic getaway or a relaxing escape with this special room. It's the perfect choice for those looking to create unforgettable memories by the sea."
+  },
+  {
+    "id": 3,
+    "room_description": "Suite with Ocean View",
+    "price_per_night": 250,
+    "room_img": "https://i.ibb.co/XSs3MHw/roberto-nickson-emqn-SQw-QQDo-unsplash.jpg",
+    "specialty": "Mountain View Retreat",
+    "description": "Escape to the serenity of the mountains with our Mountain View Retreat. This charming room boasts stunning panoramic views of the surrounding peaks and forests. Featuring a cozy fireplace, a queen-size bed, and a private balcony, it's the perfect choice for nature enthusiasts and those seeking a peaceful, rustic escape. Embrace the tranquility of the mountains in this cozy retreat."
+  }
+]
