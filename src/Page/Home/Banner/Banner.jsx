@@ -1,8 +1,12 @@
 const Banner = () => {
   return (
-    <div>
+    <div className="flex items-center ">
       <div>
-        <h1>Exclusive Hotel Discounts for Your Next Getaway</h1>
+        <h1 className="text-4xl font-bold">
+          Exclusive Hotel{" "}
+          <span className="text-yellow-400 text-5xl">Discounts</span> for Your
+          Next Getaway
+        </h1>
         <p>
           Are you dreaming of a memorable vacation but worried about your
           budget? Look no further! We are excited to offer you exclusive hotel
