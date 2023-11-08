@@ -77,7 +77,7 @@ const MyBookingCard = ({ booked, setData, data }) => {
               </Link>
               <button
                 onClick={handleDelete}
-                className="btn btn-outline btn-secondary"
+                className="btn btn-outline btn-error ml-5"
               >
                 Delete
               </button>
