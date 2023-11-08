@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const MyBookingCard = ({ booked }) => {
   const {
@@ -13,6 +14,32 @@ const MyBookingCard = ({ booked }) => {
     specialOffer_available,
     short_description,
   } = booked;
+
+  const handleDelete = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/bookingDelete/${_id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((value) => console.log(value));
+        // Swal.fire({
+        //   title: "Deleted!",
+        //   text: "Your file has been deleted.",
+        //   icon: "success",
+        // });
+      }
+    });
+  };
+
   return (
     <Link>
       <div className="max-w-7xl mx-auto mt-5">
@@ -39,6 +66,12 @@ const MyBookingCard = ({ booked }) => {
               >
                 Show Details
               </Link>
+              <button
+                onClick={handleDelete}
+                className="btn btn-outline btn-secondary"
+              >
+                Delete
+              </button>
             </div>
           </div>
         </div>
