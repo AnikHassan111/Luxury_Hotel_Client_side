@@ -1,6 +1,7 @@
 import Banner from "../Banner/Banner";
 import FeaturedRoom from "../FeaturedRoom/FeaturedRoom";
 import HotelPhotoGallry from "../HotelPhotoGallry/HotelPhotoGallry";
+import NewLetterSingUp from "../NewsLetterSingUp/NewLetterSingUp";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <HotelPhotoGallry></HotelPhotoGallry>
       <Banner></Banner>
       <FeaturedRoom></FeaturedRoom>
+      <NewLetterSingUp></NewLetterSingUp>
     </div>
   );
 };
