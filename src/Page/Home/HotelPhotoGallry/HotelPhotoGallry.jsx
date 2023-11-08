@@ -12,7 +12,7 @@ const HotelPhotoGallry = () => {
   }, []);
   console.log(hotelviewpicData);
   return (
-    <div>
+    <div className="mx-3">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 my-5  ">
         {hotelviewpicData.map((data) => (
           <GellaryCard key={data.id} data={data}></GellaryCard>

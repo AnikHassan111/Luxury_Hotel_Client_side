@@ -12,7 +12,7 @@ const FeaturedRoom = () => {
   return (
     <div>
       <h1 className="text-4xl font-bold text-center">Featured Section</h1>
-      <div className="grid grid-cols-3 gap-3 my-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 my-5">
         {featruedData.map((data) => (
           <FeaturedCard key={data._id} data={data}></FeaturedCard>
         ))}

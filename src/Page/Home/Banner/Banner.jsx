@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <div className="flex items-center gap-5 my-5 ">
+    <div className="gird grid-cols-1 md:grid-cols-2 items-center gap-5 my-5 ">
       <div className="space-y-4">
         <h1 className="text-3xl font-bold">
           Exclusive Hotel{" "}
@@ -25,7 +25,7 @@ const Banner = () => {
         <img
           src="https://i.ibb.co/QmCXNy0/francesca-saraco-d-S27-XGg-Ry-Q-unsplash.jpg"
           alt=""
-          className="rounded-lg"
+          className="rounded-lg mt-6 md:mt-0"
         />
       </div>
     </div>

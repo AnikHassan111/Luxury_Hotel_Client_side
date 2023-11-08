@@ -1,9 +1,11 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import { ContextApi } from "../../AuthProvider/AuthProvider";
 
 const SIngleRoomDetails = () => {
+  const { user } = useContext(ContextApi);
   const [singleRoomData, setSingleRoomData] = useState([]);
   const { id } = useParams();
   useEffect(() => {
@@ -22,30 +24,35 @@ const SIngleRoomDetails = () => {
     short_description,
   } = singleRoomData;
 
+  const navgate = useNavigate();
   const handleBooking = () => {
-    Swal.fire({
-      title: "Are you sure?",
-      text: "You are booking this room",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes Booking",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        axios
-          .post("http://localhost:5000/bookign", singleRoomData)
-          .then((res) => {
-            if (res.data.acknowledged) {
-              Swal.fire({
-                title: "Bookgin successFull",
-                text: "Your file has been deleted.",
-                icon: "success",
-              });
-            }
-          });
-      }
-    });
+    if (user) {
+      Swal.fire({
+        title: "Are you sure?",
+        text: "You are booking this room",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes Booking",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          axios
+            .post("http://localhost:5000/bookign", singleRoomData)
+            .then((res) => {
+              if (res.data.acknowledged) {
+                Swal.fire({
+                  title: "Bookgin successFull",
+                  text: "Your file has been deleted.",
+                  icon: "success",
+                });
+              }
+            });
+        }
+      });
+    } else {
+      navgate("/login");
+    }
   };
   return (
     <div className="max-w-7xl mx-auto mt-5">
