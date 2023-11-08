@@ -35,12 +35,15 @@ const SIngleRoomDetails = () => {
       if (result.isConfirmed) {
         axios
           .post("http://localhost:5000/bookign", singleRoomData)
-          .then((res) => console.log(res.data));
-        Swal.fire({
-          title: "Bookgin successFull",
-          text: "Your file has been deleted.",
-          icon: "success",
-        });
+          .then((res) => {
+            if (res.data.acknowledged) {
+              Swal.fire({
+                title: "Bookgin successFull",
+                text: "Your file has been deleted.",
+                icon: "success",
+              });
+            }
+          });
       }
     });
   };
