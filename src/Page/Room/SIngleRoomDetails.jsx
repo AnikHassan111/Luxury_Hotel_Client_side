@@ -30,17 +30,17 @@ const SIngleRoomDetails = () => {
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
+      confirmButtonText: "Yes Booking",
     }).then((result) => {
       if (result.isConfirmed) {
         axios
           .post("http://localhost:5000/bookign", singleRoomData)
           .then((res) => console.log(res.data));
-        // Swal.fire({
-        //   title: "Bookgin successFull",
-        //   text: "Your file has been deleted.",
-        //   icon: "success",
-        // });
+        Swal.fire({
+          title: "Bookgin successFull",
+          text: "Your file has been deleted.",
+          icon: "success",
+        });
       }
     });
   };

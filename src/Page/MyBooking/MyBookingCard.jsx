@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const MyBookingCard = ({ booked }) => {
+const MyBookingCard = ({ booked, setData, data }) => {
   const {
     _id,
     room_description,
@@ -30,12 +30,21 @@ const MyBookingCard = ({ booked }) => {
           method: "DELETE",
         })
           .then((res) => res.json())
-          .then((value) => console.log(value));
-        // Swal.fire({
-        //   title: "Deleted!",
-        //   text: "Your file has been deleted.",
-        //   icon: "success",
-        // });
+          .then((value) => {
+            console.log(value);
+
+            if (value.deletedCount > 0) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success",
+              });
+
+              const remaning = data.filter((rem) => rem._id !== _id);
+
+              setData(remaning);
+            }
+          });
       }
     });
   };

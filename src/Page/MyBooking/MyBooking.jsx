@@ -11,6 +11,7 @@ const MyBooking = () => {
       .then((res) => setData(res.data));
   }, []);
   console.log(data);
+
   return (
     <div>
       <Link to={"/room"}>
@@ -20,7 +21,12 @@ const MyBooking = () => {
       </Link>
       <div className="max-w-7xl mx-auto ">
         {data.map((booked) => (
-          <MyBookingCard key={booked._id} booked={booked}></MyBookingCard>
+          <MyBookingCard
+            setData={setData}
+            data={data}
+            key={booked._id}
+            booked={booked}
+          ></MyBookingCard>
         ))}
       </div>
     </div>
