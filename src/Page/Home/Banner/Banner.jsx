@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <div className="gird grid-cols-1 md:grid-cols-2 items-center gap-5 my-5 ">
+    <div className="gird lg:flex grid-cols-1 items-center gap-5 my-5 ">
       <div className="space-y-4">
         <h1 className="text-3xl font-bold">
           Exclusive Hotel{" "}

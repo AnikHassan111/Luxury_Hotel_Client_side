@@ -1,9 +1,11 @@
 import { useContext } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import { ContextApi } from "../AuthProvider/AuthProvider";
 
 const PriventRoute = ({ children }) => {
   let { user, loading } = useContext(ContextApi);
+
+  const loaction = useLocation();
 
   if (loading) {
     return (
@@ -14,7 +16,7 @@ const PriventRoute = ({ children }) => {
   }
 
   if (!user) {
-    return <Navigate to={"/login"}></Navigate>;
+    return <Navigate state={loaction.pathname} to={"/login"}></Navigate>;
   }
   return children;
 };

@@ -1,6 +1,6 @@
 const FeaturedCard = ({ data }) => {
   const { room_img, room_description, description, specialty } = data;
-  console.log(data.short_description);
+
   return (
     <div className="card   shadow-xl image-full">
       <figure>
