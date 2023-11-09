@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import { ContextApi } from "../../AuthProvider/AuthProvider";
 
@@ -25,35 +25,7 @@ const SIngleRoomDetails = () => {
   } = singleRoomData;
 
   const navgate = useNavigate();
-  const handleBooking = () => {
-    if (user) {
-      Swal.fire({
-        title: "Are you sure?",
-        text: "You are booking this room",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes Booking",
-      }).then((result) => {
-        if (result.isConfirmed) {
-          axios
-            .post("http://localhost:5000/bookign", singleRoomData)
-            .then((res) => {
-              if (res.data.acknowledged) {
-                Swal.fire({
-                  title: "Bookgin successFull",
-                  text: "Your file has been deleted.",
-                  icon: "success",
-                });
-              }
-            });
-        }
-      });
-    } else {
-      navgate("/login");
-    }
-  };
+
   return (
     <div className="max-w-7xl mx-auto mt-5">
       <div className="hero ">
@@ -71,12 +43,11 @@ const SIngleRoomDetails = () => {
               <p className=" font-semibold">{short_description}</p>
             </div>
 
-            <button
-              onClick={handleBooking}
-              className="btn btn-outline btn-secondary"
-            >
-              Book Now
-            </button>
+            <Link to={`/booknowsection/${_id}`}>
+              <button className="btn btn-outline btn-secondary">
+                Book Now
+              </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -5,12 +5,14 @@ const MyBookingCard = ({ booked, setData, data }) => {
   const {
     _id,
     room_description,
-    price_per_night,
     room_size,
-    availability,
     room_img,
-    specialOffer_available,
-    short_description,
+    Fname,
+    Lname,
+    email,
+    roomType,
+    bookingDate,
+    sectialRequest,
   } = booked;
 
   const handleDelete = () => {
@@ -29,12 +31,10 @@ const MyBookingCard = ({ booked, setData, data }) => {
         })
           .then((res) => res.json())
           .then((value) => {
-            console.log(value);
-
             if (value.deletedCount > 0) {
               Swal.fire({
                 title: "Deleted!",
-                text: "Your file has been deleted.",
+                text: "Your Room Booked is Chancle",
                 icon: "success",
               });
 
@@ -56,23 +56,19 @@ const MyBookingCard = ({ booked, setData, data }) => {
             <div className="">
               <h1 className="text-5xl font-bold">{room_description}</h1>
               <div className="py-3">
-                <p className="py-2 font-semibold">Room Size {room_size}</p>
-                <p className="py-2 font-semibold">Availability{availability}</p>
                 <p className="py-2 font-semibold">
-                  Pre Night ${price_per_night}
+                  Name : {Fname} {Lname}
                 </p>
+                <p className="py-2 font-semibold">Room Size : {room_size}</p>
+                <p className="py-2 font-semibold">Email : {email}</p>
+                <p className="py-2 font-semibold">Room Type : {roomType}</p>
                 <p className="py-2 font-semibold">
-                  Special Offers{specialOffer_available}
+                  Booking Date : {bookingDate}
                 </p>
-                <p className=" font-semibold">{short_description}</p>
+                <p className=" font-semibold">
+                  Spectial Request : {sectialRequest}
+                </p>
               </div>
-
-              <Link
-                to={`/roomshowDetails/${_id}`}
-                className="btn btn-outline btn-secondary"
-              >
-                Show Details
-              </Link>
               <button
                 onClick={handleDelete}
                 className="btn btn-outline btn-error ml-5"

@@ -8,6 +8,7 @@ import Room from "../Page/Room/Room";
 import SIngleRoomDetails from "../Page/Room/SIngleRoomDetails";
 import MyBooking from "../Page/MyBooking/MyBooking";
 import PriventRoute from "../PrivateRoute/PrivateRoute";
+import BookNow from "../Page/BookNow/BookNow";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,14 @@ const router = createBrowserRouter([
       {
         path: "/roomshowDetails/:id",
         element: <SIngleRoomDetails></SIngleRoomDetails>,
+      },
+      {
+        path: "/booknowsection/:id",
+        element: (
+          <PriventRoute>
+            <BookNow></BookNow>
+          </PriventRoute>
+        ),
       },
     ],
   },

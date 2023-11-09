@@ -31,7 +31,7 @@ const Login = () => {
             { email },
             { withCredentials: true }
           )
-          .then((res) => console.log(res.data));
+          .then((res) => {});
         navgate(loaction?.state ? loaction.state : "/");
       })
       .catch(() => {

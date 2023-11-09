@@ -1,16 +1,20 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import MyBookingCard from "./MyBookingCard";
 import { Link } from "react-router-dom";
+import { ContextApi } from "../../AuthProvider/AuthProvider";
 
 const MyBooking = () => {
   const [data, setData] = useState([]);
+  const { user } = useContext(ContextApi);
+  const email = user.email;
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getbooking")
+      .get(`http://localhost:5000/getbooking?email=${email}`, {
+        withCredentials: true,
+      })
       .then((res) => setData(res.data));
   }, []);
-  console.log(data);
 
   return (
     <div>

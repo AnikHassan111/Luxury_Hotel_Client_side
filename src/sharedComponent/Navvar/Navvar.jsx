@@ -18,12 +18,18 @@ const Navvar = () => {
       <li>
         <NavLink to={"/"}>Home</NavLink>
       </li>
-      <li>
-        <NavLink to={"/login"}>Login</NavLink>
-      </li>
-      <li>
-        <NavLink to={"/register"}>Register</NavLink>
-      </li>
+      {user ? (
+        ""
+      ) : (
+        <div className="flex ">
+          <li>
+            <NavLink to={"/login"}>Login</NavLink>
+          </li>
+          <li>
+            <NavLink to={"/register"}>Register</NavLink>
+          </li>
+        </div>
+      )}
       <li>
         <NavLink to={"/room"}>Room</NavLink>
       </li>
