@@ -1,9 +1,7 @@
-import { useContext } from "react";
 import Banner from "../Banner/Banner";
 import FeaturedRoom from "../FeaturedRoom/FeaturedRoom";
 import HotelPhotoGallry from "../HotelPhotoGallry/HotelPhotoGallry";
 import NewLetterSingUp from "../NewsLetterSingUp/NewLetterSingUp";
-import { ContextApi } from "../../../AuthProvider/AuthProvider";
 
 const Home = () => {
   return (
@@ -12,6 +10,7 @@ const Home = () => {
       <Banner></Banner>
       <FeaturedRoom></FeaturedRoom>
       <NewLetterSingUp></NewLetterSingUp>
+      AOS.init();
     </div>
   );
 };

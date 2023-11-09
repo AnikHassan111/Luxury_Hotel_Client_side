@@ -18,12 +18,12 @@ const MyBookingCard = ({ booked, setData, data }) => {
   const handleDelete = () => {
     Swal.fire({
       title: "Are you sure?",
-      text: "You Delete this booking",
+      text: "You Cancel booking",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
+      confirmButtonText: "cancel Booking",
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(`http://localhost:5000/bookingDelete/${_id}`, {
@@ -73,7 +73,7 @@ const MyBookingCard = ({ booked, setData, data }) => {
                 onClick={handleDelete}
                 className="btn btn-outline btn-error ml-5"
               >
-                Delete
+                cancel Booking
               </button>
               <Link to={`/updateDate/${_id}`}>
                 <button className="btn btn-outline btn-error ml-5">

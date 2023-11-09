@@ -21,7 +21,7 @@ const MyBooking = () => {
     <div>
       <Link to={"/room"}>
         <h1 className="text-center font-bold text-3xl my-3 cursor-pointer">
-          Go Rooms
+          Go Hotel Rooms
         </h1>
       </Link>
       <div className="max-w-7xl mx-auto ">
