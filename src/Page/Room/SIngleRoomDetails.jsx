@@ -1,11 +1,8 @@
 import axios from "axios";
-import { useContext, useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import Swal from "sweetalert2";
-import { ContextApi } from "../../AuthProvider/AuthProvider";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 
 const SIngleRoomDetails = () => {
-  const { user } = useContext(ContextApi);
   const [singleRoomData, setSingleRoomData] = useState([]);
   const { id } = useParams();
   useEffect(() => {
@@ -23,8 +20,6 @@ const SIngleRoomDetails = () => {
     specialOffer_available,
     short_description,
   } = singleRoomData;
-
-  const navgate = useNavigate();
 
   return (
     <div className="max-w-7xl mx-auto mt-5">

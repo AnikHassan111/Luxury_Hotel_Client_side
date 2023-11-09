@@ -8,6 +8,7 @@ const MyBooking = () => {
   const [data, setData] = useState([]);
   const { user } = useContext(ContextApi);
   const email = user.email;
+  // console.log("userEmail", email);
   useEffect(() => {
     axios
       .get(`http://localhost:5000/getbooking?email=${email}`, {
@@ -15,7 +16,7 @@ const MyBooking = () => {
       })
       .then((res) => setData(res.data));
   }, []);
-
+  // console.log(data);
   return (
     <div>
       <Link to={"/room"}>
@@ -24,7 +25,7 @@ const MyBooking = () => {
         </h1>
       </Link>
       <div className="max-w-7xl mx-auto ">
-        {data.map((booked) => (
+        {data?.map((booked) => (
           <MyBookingCard
             setData={setData}
             data={data}

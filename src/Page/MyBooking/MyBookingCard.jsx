@@ -75,6 +75,11 @@ const MyBookingCard = ({ booked, setData, data }) => {
               >
                 Delete
               </button>
+              <Link to={`/updateDate/${_id}`}>
+                <button className="btn btn-outline btn-error ml-5">
+                  Update your Date
+                </button>
+              </Link>
             </div>
           </div>
         </div>

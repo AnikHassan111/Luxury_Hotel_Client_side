@@ -9,6 +9,7 @@ import SIngleRoomDetails from "../Page/Room/SIngleRoomDetails";
 import MyBooking from "../Page/MyBooking/MyBooking";
 import PriventRoute from "../PrivateRoute/PrivateRoute";
 import BookNow from "../Page/BookNow/BookNow";
+import UpdateDate from "../Page/MyBooking/UpdateDate";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/roomshowDetails/:id",
         element: <SIngleRoomDetails></SIngleRoomDetails>,
+      },
+      {
+        path: "/updateDate/:id",
+        element: <UpdateDate></UpdateDate>,
       },
       {
         path: "/booknowsection/:id",

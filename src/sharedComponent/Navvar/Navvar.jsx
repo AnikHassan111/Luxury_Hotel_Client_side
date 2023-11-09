@@ -31,7 +31,7 @@ const Navvar = () => {
         </div>
       )}
       <li>
-        <NavLink to={"/room"}>Room</NavLink>
+        <NavLink to={"/room"}>Hotel Room</NavLink>
       </li>
       <li>
         <NavLink to={"/mybooking"}>My Booking</NavLink>

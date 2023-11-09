@@ -19,7 +19,7 @@ const BookNow = () => {
     room_img,
     specialOffer_available,
     short_description,
-  } = bookRoomData;
+  } = bookRoomData || {};
   useEffect(() => {
     axios
       .get(`http://localhost:5000/roomshowDetails/${id}`)
@@ -139,10 +139,9 @@ const BookNow = () => {
               <select
                 className="select select-bordered  max-w-xs"
                 onChange={handleSelect}
+                defaultValue={"df"}
               >
-                <option disabled selected>
-                  Please Select
-                </option>
+                <option selected>Please Select</option>
                 <option>Standred Room 1 to 2 people</option>
                 <option>Familly Room 1 to 4 peopele</option>
                 <option>Private Room 1 to 3 peopele</option>
