@@ -7,7 +7,7 @@ const HotelPhotoGallry = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/hotelviewpic")
+      .get("https://b8a11-server-side-anik-hassan111.vercel.app/hotelviewpic")
       .then((res) => setHotelviewpicData(res.data));
   }, []);
 

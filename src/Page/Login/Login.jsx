@@ -27,7 +27,7 @@ const Login = () => {
         });
         axios
           .post(
-            "http://localhost:5000/jwt",
+            "https://b8a11-server-side-anik-hassan111.vercel.app/jwt",
             { email },
             { withCredentials: true }
           )

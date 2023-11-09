@@ -10,7 +10,7 @@ const Room = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/room")
+      .get("https://b8a11-server-side-anik-hassan111.vercel.app/room")
       .then((res) => setRoomData(res.data));
   }, []);
 

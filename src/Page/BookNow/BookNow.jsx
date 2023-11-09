@@ -22,7 +22,9 @@ const BookNow = () => {
   } = bookRoomData || {};
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/roomshowDetails/${id}`)
+      .get(
+        `https://b8a11-server-side-anik-hassan111.vercel.app/roomshowDetails/${id}`
+      )
       .then((res) => setBookRoomData(res.data));
   }, []);
 
@@ -72,7 +74,10 @@ const BookNow = () => {
       }).then((result) => {
         if (result.isConfirmed) {
           axios
-            .post("http://localhost:5000/bookign", singleRoomData)
+            .post(
+              "https://b8a11-server-side-anik-hassan111.vercel.app/bookign",
+              singleRoomData
+            )
             .then((res) => {
               if (res.data.acknowledged) {
                 Swal.fire({

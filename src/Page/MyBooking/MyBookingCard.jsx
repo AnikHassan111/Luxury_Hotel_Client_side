@@ -26,7 +26,7 @@ const MyBookingCard = ({ booked, setData, data }) => {
       confirmButtonText: "cancel Booking",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/bookingDelete/${_id}`, {
+        fetch(`https://b8a11-server-side-anik-hassan111.vercel.app/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

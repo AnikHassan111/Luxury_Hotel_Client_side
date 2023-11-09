@@ -5,9 +5,9 @@ import FeaturedCard from "./FeaturedCard";
 const FeaturedRoom = () => {
   const [featruedData, setFeatruedData] = useState([]);
   useEffect(() => {
-    axios("http://localhost:5000/featuredroom").then((res) =>
-      setFeatruedData(res.data)
-    );
+    axios(
+      "https://b8a11-server-side-anik-hassan111.vercel.app/featuredroom"
+    ).then((res) => setFeatruedData(res.data));
   }, []);
   return (
     <div>

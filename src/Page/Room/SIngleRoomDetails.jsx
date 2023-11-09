@@ -6,8 +6,8 @@ const SIngleRoomDetails = () => {
   const [singleRoomData, setSingleRoomData] = useState([]);
   const { id } = useParams();
   useEffect(() => {
-    axios(`http://localhost:5000/roomshowDetails/${id}`).then((res) =>
-      setSingleRoomData(res.data)
+    axios(`https://b8a11-server-side-anik-hassan111.vercel.app/${id}`).then(
+      (res) => setSingleRoomData(res.data)
     );
   }, []);
   const {

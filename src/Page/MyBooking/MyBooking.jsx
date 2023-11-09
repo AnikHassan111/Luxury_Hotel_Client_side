@@ -11,9 +11,12 @@ const MyBooking = () => {
   // console.log("userEmail", email);
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/getbooking?email=${email}`, {
-        withCredentials: true,
-      })
+      .get(
+        `https://b8a11-server-side-anik-hassan111.vercel.app/getbooking?email=${email}`,
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => setData(res.data));
   }, []);
   // console.log(data);

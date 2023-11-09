@@ -20,7 +20,10 @@ const UpdateDate = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .put(`http://localhost:5000/updateDate/${id}`, { date })
+          .put(
+            `https://b8a11-server-side-anik-hassan111.vercel.app/updateDate/${id}`,
+            { date }
+          )
           .then((res) => {
             if (res.data.modifiedCount > 0) {
               Swal.fire({
